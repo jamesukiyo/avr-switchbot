@@ -1,12 +1,12 @@
 [package]
-name = "avr-hal-testing"
+name = "avr-switchbot"
 version = "0.1.0"
 authors = ["James Plummer <jamesp2001@live.co.uk>"]
 edition = "2021"
 license = "MIT"
 
 [[bin]]
-name = "james"
+name = "switchbot"
 path = "src/main.rs"
 test = false
 bench = false
@@ -14,8 +14,10 @@ bench = false
 [dependencies]
 panic-halt = "1.0.0"
 ufmt = "0.2.0"
-nb = "1.1.0"
-embedded-hal = "1.0"
+# nb = "1.1.0"
+# embedded-hal = "1.0"
+avr-device = "0.7"
+infrared = "0.14.1"
 
 [dependencies.arduino-hal]
 git = "https://github.com/rahix/avr-hal"

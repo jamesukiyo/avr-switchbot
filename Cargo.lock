@@ -64,12 +64,12 @@ dependencies = [
 ]
 
 [[package]]
-name = "avr-hal-testing"
+name = "avr-switchbot"
 version = "0.1.0"
 dependencies = [
  "arduino-hal",
- "embedded-hal 1.0.0",
- "nb 1.1.0",
+ "avr-device",
+ "infrared",
  "panic-halt",
  "ufmt",
 ]
@@ -123,6 +123,31 @@ name = "embedded-storage"
 version = "0.2.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "723dce4e9f25b6e6c5f35628e144794e5b459216ed7da97b7c4b66cdb3fa82ca"
+
+[[package]]
+name = "fugit"
+version = "0.3.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "17186ad64927d5ac8f02c1e77ccefa08ccd9eaa314d5a4772278aa204a22f7e7"
+dependencies = [
+ "gcd",
+]
+
+[[package]]
+name = "gcd"
+version = "2.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "1d758ba1b47b00caf47f24925c0074ecb20d6dfcffe7f6d53395c0465674841a"
+
+[[package]]
+name = "infrared"
+version = "0.14.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "178d1045554b6f52df07656403f4cbd316b480f673ed97cb726b34504f94bbed"
+dependencies = [
+ "embedded-hal 0.2.7",
+ "fugit",
+]
 
 [[package]]
 name = "nb"
