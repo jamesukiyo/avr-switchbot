@@ -11,10 +11,11 @@
  *   2. wait 1 second
  *   3. move servo to minimum position
  *
- * Author: James Plummer <jamesp2001@live.co.uk>
- * Repository: https://github.com/jamesukiyo/switchbot
+ * Author: PlumJam <git@plumj.am>
+ * Repository: https://github.com/jamesukiyo/avr-switchbot
+ * Mirror: https://git.plumj.am/plumjam/avr-switchbot
  * License: MIT
- * Last modified: 2025-08-03
+ * Last modified: 2025-09-17
  *
  * Hardware:
  *   - Arduino Uno (with the ATmega328P microcontroller)

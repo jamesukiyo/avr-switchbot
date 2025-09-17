@@ -1,38 +1,36 @@
 [package]
-name = "avr-switchbot"
+name    = "avr-switchbot"
 version = "0.1.0"
-authors = ["James Plummer <jamesp2001@live.co.uk>"]
+authors = ["PlumJam <git@plumj.am>"]
 edition = "2021"
 license = "MIT"
 
 [[bin]]
-name = "switchbot"
-path = "src/main.rs"
-test = false
+name  = "switchbot"
+path  = "src/main.rs"
+test  = false
 bench = false
 
 [dependencies]
 panic-halt = "1.0.0"
-ufmt = "0.2.0"
-# nb = "1.1.0"
-# embedded-hal = "1.0"
-avr-device = "0.7"
-infrared = "0.14.1"
+ufmt       = "0.2.0"
+avr-device = "0.7.0"
+infrared   = "0.14.1"
 
 [dependencies.arduino-hal]
-git = "https://github.com/rahix/avr-hal"
-rev = "fafaf587a32a4500239fd073f89d1b9c36b48092"
+git      = "https://github.com/rahix/avr-hal"
+rev      = "fafaf587a32a4500239fd073f89d1b9c36b48092"
 features = ["arduino-uno"]
 
 # Configure the build for minimal size - AVRs have very little program memory
 [profile.dev]
-panic = "abort"
-lto = true
+panic     = "abort"
+lto       = true
 opt-level = "s"
 
 [profile.release]
-panic = "abort"
+panic         = "abort"
 codegen-units = 1
-debug = true
-lto = true
-opt-level = "s"
+debug         = true
+lto           = true
+opt-level     = "s"
